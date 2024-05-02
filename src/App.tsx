@@ -1,120 +1,130 @@
-import { SiYoutube, SiGithub } from "react-icons/si"
 import { Section } from "./components/site/Section"
+import { Container } from "./components/site/Container"
+import { Layout } from "./components/site/Layout"
+import { Button } from "./components/library/Button"
 
 export default function App() {
 	return (
-		<div className="relative min-h-screen bg-white">
-			{/* {Navbar} */}
-			<header className="sticky top-0 z-50 w-full border-b bg-white">
-				<div className="flex h-16 items-center px-10 sm:px-16 lg:px-44">
-					<div className="mx-auto w-full max-w-3xl space-y-20">
-						<div className="flex justify-between">
-							<div className="flex flex-1 items-center justify-start"></div>
+		<Layout>
+			<Container
+				title="Button"
+				description="A button widget is a UI element that is used to trigger an action. These actions can be navigating to another form, deleting operations, performing animations, or interacting with a dialog box for example."
+			>
+				<Section
+					title="Primary"
+					description="Primary actions should be obvious. Solid, high contrast background colors work great here."
+				>
+					<Button>Default Primary</Button>
+					<Button disabled>Disabled Primary</Button>
+				</Section>
+				<Section
+					title="Secondary"
+					description="Secondary actions should be clear but not prominent. Outline styles or lower contrast background colors are great options."
+				>
+					<Button variant="secondary">Default Secondary</Button>
+					<Button variant="secondary" disabled>
+						Disabled Secondary
+					</Button>
+				</Section>
+				<Section
+					title="Tertiary"
+					description="Tertiary actions should be discoverable but unobtrusive. Styling these actions like links is usually the best approach"
+				>
+					<Button variant="tertiary">Default Tertiary</Button>
+					<Button variant="tertiary" disabled>
+						Disabled Tertiary
+					</Button>
+				</Section>
+				<Section
+					title="Destructive"
+					description="Destructive actions typically result in the removal of an item, and may result in an undesirable consequence"
+				>
+					<div className="bg-blue-500/50 p-3">
+						component 1 using a component
+					</div>
+					<div className="bg-blue-500/50 p-3">
+						component 2 using a component
+					</div>
+				</Section>
+			</Container>
 
-							<a
-								href="/"
-								className="inline-flex h-10 items-center justify-center text-lg font-bold text-gray-800"
-							>
-								Walaa's UI Component Library
-							</a>
-							<div className="flex flex-1 items-center justify-end">
-								<nav className="flex items-center space-x-1">
-									<a
-										href="https://www.youtube.com"
-										className="h-10 w-10 p-2 text-gray-800 hover:text-[#ff0000]"
-									>
-										<SiYoutube className="h-full w-full" />
-									</a>
-									<a
-										href="https://www.github.com/wsarsou"
-										className="h-10 w-10 p-2 text-gray-800 hover:text-[#4078c0]"
-									>
-										<SiGithub className="h-full w-full" />
-									</a>
-								</nav>
-							</div>
-						</div>
+			<Container
+				title="component name using a component"
+				description="description using a component"
+			>
+				<Section
+					title="section heading using a component"
+					description="section description using a component"
+				>
+					<div className="bg-blue-500/50 p-3">
+						component 1 using a component
 					</div>
-				</div>
-			</header>
-			{/* {Main content area} */}
-			<main className="sm-px-16 p-10 lg:px-44">
-				<div className="mx-auto max-w-3xl space-y-20">
-					{/* {Content container} */}
-					<header>
-						<h1 className="block text-2xl font-bold text-gray-800 sm:text-3xl">
-							component name
-						</h1>
-						<p className="mt-2 text-lg text-gray-800">description</p>
-					</header>
-					<div className="space-y-10 md:space-y-16">
-						<Section
-							title="section heading using a component"
-							description="section description using a component"
-						>
-							<div className="bg-blue-500/50 p-3">
-								component 1 using a component
-							</div>
-							<div className="bg-blue-500/50 p-3">
-								component 2 using a component
-							</div>
-						</Section>
-						<Section
-							title="section heading using a component"
-							description="section description using a component"
-						>
-							<div className="bg-blue-500/50 p-3">
-								component 1 using a component
-							</div>
-							<div className="bg-blue-500/50 p-3">
-								component 2 using a component
-							</div>
-						</Section>
-						<Section
-							title="section heading using a component"
-							description="section description using a component"
-						>
-							<div className="bg-blue-500/50 p-3">
-								component 1 using a component
-							</div>
-							<div className="bg-blue-500/50 p-3">
-								component 2 using a component
-							</div>
-						</Section>
+					<div className="bg-blue-500/50 p-3">
+						component 2 using a component
 					</div>
-					{/* {Content container} */}
-					<header>
-						<h1 className="block text-2xl font-bold text-gray-800 sm:text-3xl">
-							component name
-						</h1>
-						<p className="mt-2 text-lg text-gray-800">description</p>
-					</header>
-					<div className="space-y-10 md:space-y-16">
-						<Section
-							title="section heading using a component"
-							description="section description using a component"
-						>
-							<div className="bg-blue-500/50 p-3">
-								component 1 using a component
-							</div>
-							<div className="bg-blue-500/50 p-3">
-								component 2 using a component
-							</div>
-						</Section>
-						<Section
-							title="section heading using a component"
-							description="section description using a component"
-						>
-							<div className="bg-blue-500/50 p-3">
-								component 1 using a component
-							</div>
-							<div className="bg-blue-500/50 p-3">
-								component 2 using a component
-							</div>
-						</Section>
+				</Section>
+				<Section
+					title="section heading using a component"
+					description="section description using a component"
+				>
+					<div className="bg-blue-500/50 p-3">
+						component 1 using a component
 					</div>
-				</div>
-			</main>
-		</div>
+					<div className="bg-blue-500/50 p-3">
+						component 2 using a component
+					</div>
+				</Section>
+				<Section
+					title="section heading using a component"
+					description="section description using a component"
+				>
+					<div className="bg-blue-500/50 p-3">
+						component 1 using a component
+					</div>
+					<div className="bg-blue-500/50 p-3">
+						component 2 using a component
+					</div>
+				</Section>
+			</Container>
+
+			<Container
+				title="component name using a component"
+				description="description using a component"
+			>
+				<Section
+					title="section heading using a component"
+					description="section description using a component"
+				>
+					<div className="bg-blue-500/50 p-3">
+						component 1 using a component
+					</div>
+					<div className="bg-blue-500/50 p-3">
+						component 2 using a component
+					</div>
+				</Section>
+				<Section
+					title="section heading using a component"
+					description="section description using a component"
+				>
+					<div className="bg-blue-500/50 p-3">
+						component 1 using a component
+					</div>
+					<div className="bg-blue-500/50 p-3">
+						component 2 using a component
+					</div>
+				</Section>
+				<Section
+					title="section heading using a component"
+					description="section description using a component"
+				>
+					<div className="bg-blue-500/50 p-3">
+						component 1 using a component
+					</div>
+					<div className="bg-blue-500/50 p-3">
+						component 2 using a component
+					</div>
+				</Section>
+			</Container>
+		</Layout>
 	)
 }
