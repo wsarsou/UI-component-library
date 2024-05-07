@@ -76,6 +76,31 @@ export const ContentCard = ({
 		</CardContainer>
 	)
 }
-export const BlockLinkCard = () => {
-	return <div>BlockLinkCard</div>
+
+// This type of card is for providing block links.
+
+export const BlockLinkCard = ({
+	url,
+	text,
+	children,
+}: {
+	url?: string // URL for the link. if none provied, default to '#'
+	text?: string // the text content being displayed inside the card
+	children: React.ReactNode //children elements that will be rendered inside the card
+}) => {
+	const linkClasses: string = "flex flex-col items-center p-6 sm:p-10"
+
+	const linkContent = (
+		<>
+			{children}
+			{text && <p className="mt-2 font-medium">{text}</p>}{" "}
+		</>
+	)
+	return (
+		<CardContainer className="text-gray-800 transition-colors hover:bg-gray-200/50">
+			<a href={url || "#"} className={linkClasses} target="_blank">
+				{linkContent}
+			</a>
+		</CardContainer>
+	)
 }
