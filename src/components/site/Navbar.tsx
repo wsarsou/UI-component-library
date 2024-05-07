@@ -17,12 +17,14 @@ export const Navbar = () => {
 							<nav className="flex items-center space-x-1">
 								<a
 									href="https://www.youtube.com"
+									target="_blank"
 									className="h-10 w-10 p-2 text-gray-800 hover:text-[#ff0000]"
 								>
 									<SiYoutube className="h-full w-full" />
 								</a>
 								<a
 									href="https://www.github.com/wsarsou"
+									target="_blank"
 									className="h-10 w-10 p-2 text-gray-800 hover:text-[#4078c0]"
 								>
 									<SiGithub className="h-full w-full" />

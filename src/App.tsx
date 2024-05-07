@@ -2,6 +2,7 @@ import { Section } from "./components/site/Section"
 import { Container } from "./components/site/Container"
 import { Layout } from "./components/site/Layout"
 import { Button } from "./components/library/Button"
+import { ContentCard } from "./components/library/Card"
 
 export default function App() {
 	return (
@@ -244,80 +245,55 @@ export default function App() {
 			</Container>
 
 			<Container
-				title="component name using a component"
-				description="description using a component"
+				title="Card"
+				description="A card is a flexible and extensible content container"
 			>
 				<Section
-					title="section heading using a component"
-					description="section description using a component"
+					title="Simple"
+					description="Simple cards display content and can provide a distinct link that can be selected"
 				>
-					<div className="bg-blue-500/50 p-3">
-						component 1 using a component
-					</div>
-					<div className="bg-blue-500/50 p-3">
-						component 2 using a component
-					</div>
+					{/* Simple card */}
+					<ContentCard
+						title="Card title"
+						subtitle="Card subtitle"
+						plaintext="Some quick example text to build on the card title and make up the bulk of the card's content"
+						link={{
+							url: "#",
+							text: "Card link",
+						}}
+					></ContentCard>
 				</Section>
 				<Section
-					title="section heading using a component"
-					description="section description using a component"
+					title="Simple with a header and footer"
+					description="Add an optional header and/or footer within a card"
 				>
-					<div className="bg-blue-500/50 p-3">
-						component 1 using a component
-					</div>
-					<div className="bg-blue-500/50 p-3">
-						component 2 using a component
-					</div>
+					{/* Simple card with header*/}
+					<ContentCard
+						header="featured"
+						title="Card title"
+						subtitle="Card subtitle"
+						plaintext="Some quick example text to build on the card title and make up the bulk of the card's content"
+						link={{
+							url: "#",
+							text: "Card link",
+						}}
+					></ContentCard>
 				</Section>
 				<Section
-					title="section heading using a component"
-					description="section description using a component"
+					title="Simple"
+					description="Simple cards display content and can provide a distinct link that can be selected"
 				>
-					<div className="bg-blue-500/50 p-3">
-						component 1 using a component
-					</div>
-					<div className="bg-blue-500/50 p-3">
-						component 2 using a component
-					</div>
-				</Section>
-			</Container>
-
-			<Container
-				title="component name using a component"
-				description="description using a component"
-			>
-				<Section
-					title="section heading using a component"
-					description="section description using a component"
-				>
-					<div className="bg-blue-500/50 p-3">
-						component 1 using a component
-					</div>
-					<div className="bg-blue-500/50 p-3">
-						component 2 using a component
-					</div>
-				</Section>
-				<Section
-					title="section heading using a component"
-					description="section description using a component"
-				>
-					<div className="bg-blue-500/50 p-3">
-						component 1 using a component
-					</div>
-					<div className="bg-blue-500/50 p-3">
-						component 2 using a component
-					</div>
-				</Section>
-				<Section
-					title="section heading using a component"
-					description="section description using a component"
-				>
-					<div className="bg-blue-500/50 p-3">
-						component 1 using a component
-					</div>
-					<div className="bg-blue-500/50 p-3">
-						component 2 using a component
-					</div>
+					{/* Simple card with footer*/}
+					<ContentCard
+						footer="Last updated 5 mins ago"
+						title="Card title"
+						subtitle="Card subtitle"
+						plaintext="Some quick example text to build on the card title and make up the bulk of the card's content"
+						link={{
+							url: "#",
+							text: "Card link",
+						}}
+					></ContentCard>
 				</Section>
 			</Container>
 		</Layout>
