@@ -4,6 +4,7 @@ import { Layout } from "./components/site/Layout"
 import { Button } from "./components/library/Button"
 import { BlockLinkCard, ContentCard } from "./components/library/Card"
 import { SiNextdotjs, SiVite } from "react-icons/si"
+import { Input } from "./components/library/Input"
 
 export default function App() {
 	return (
@@ -311,6 +312,39 @@ export default function App() {
 					<BlockLinkCard url="https://nextjs.org/" text="Next.js">
 						<SiNextdotjs className="h-10 w-10" />
 					</BlockLinkCard>
+				</Section>
+			</Container>
+
+			<Container
+				title="Inputs"
+				description="An input is a widget that allows users to provide data or specify options, which can be submitted as part of a form or used to interact with and manipulate content on a web page"
+			>
+				<Section title="Basic" description="Basic input with a placeholder">
+					{/* Basic Input */}
+
+					<Input type="text" placeholder="Type things here!" />
+
+					{/* Basic Disabled Input  */}
+
+					<Input disabled type="text" placeholder="Disabled 😔" />
+					{/* emojipedia */}
+				</Section>
+
+				<Section title="Label" description="Input with a label">
+					{/* Input with a label*/}
+
+					<Input type="email" label="Email" placeholder="you@site.com" />
+				</Section>
+
+				<Section title="Description" description="Input with a description">
+					{/* Input with a description*/}
+
+					<Input
+						type="password"
+						label="Password"
+						placeholder="enter your password"
+						description="We will never share your details "
+					/>
 				</Section>
 			</Container>
 		</Layout>
