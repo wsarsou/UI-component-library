@@ -266,10 +266,10 @@ export default function App() {
 					></ContentCard>
 				</Section>
 				<Section
-					title="Simple with a header and footer"
+					title="Simple with a header or footer"
 					description="Add an optional header and/or footer within a card"
 				>
-					{/* Simple card with header*/}
+					{/* Simple card with header & footer*/}
 					<ContentCard
 						header="featured"
 						title="Card title"
@@ -280,12 +280,7 @@ export default function App() {
 							text: "Card link",
 						}}
 					></ContentCard>
-				</Section>
-				<Section
-					title="Simple"
-					description="Simple cards display content and can provide a distinct link that can be selected"
-				>
-					{/* Simple card with footer*/}
+					<br />
 					<ContentCard
 						footer="Last updated 5 mins ago"
 						title="Card title"
